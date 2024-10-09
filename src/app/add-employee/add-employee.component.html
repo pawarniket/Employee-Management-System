@@ -1,0 +1,44 @@
+<h1 mat-dialog-title class="dialog-title ">Add Employee</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addEmployeeForm">
+    <mat-form-field appearance="outline" class="FormField">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter Name">
+    </mat-form-field>
+
+
+
+    <mat-form-field appearance="outline" class="FormField">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Enter Email Address" formControlName="email" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="FormField">
+      <mat-label>Select Department</mat-label>
+      <mat-select formControlName="department">
+        <mat-option value="development">Development</mat-option>
+        <mat-option value="marketing">Marketing</mat-option>
+        <mat-option value="sales">Sales</mat-option>
+        <mat-option value="hr">Human Resources</mat-option>
+        <mat-option value="finance">Finance</mat-option>
+        <mat-option value="it">IT Support</mat-option>
+        <mat-option value="design">Design</mat-option>
+        <mat-option value="legal">Legal</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="FormField">
+      <mat-label>Date Of Joining</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" required readonly (click)="picker.open()">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  
+
+    <div class="button-container">
+      <button mat-flat-button color="primary" class="custom-button"
+        (click)="submit(addEmployeeForm.value)">Submit</button>
+    </div>
+  </form>
+</div>

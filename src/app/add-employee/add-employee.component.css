@@ -1,0 +1,22 @@
+.ex.example-spacer {
+  flex: 1 1 auto;
+}
+.dialog-title {
+  text-align: center; /* Center the title horizontally */
+}
+.FormField{
+  width: 100%;
+}
+.mdc-dialog__content>:first-child {
+  margin-top: 12px;
+}
+::ng-deep .mat-dialog-container {
+  background-color: white; /* Set background color to white */
+  padding: 20px;           /* Optional: Add padding for better spacing */
+  border-radius: 8px;      /* Optional: Add rounded corners */
+}
+.success-message {
+  color: green; /* Change text color to green */
+  margin-top: 10px; /* Add some space above the message */
+  font-weight: bold; /* Make the text bold */
+}

@@ -1,0 +1,21 @@
+<div class="col-md-12">
+    <div class="card shadow" style="border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <div class="card-body">
+            <h1
+                style="background-color: #c2185b; padding: 15px; color: white; text-align: center; margin-bottom: 20px;">
+                EMPLOYEE CARD</h1>
+
+            <div style="padding: 10px 20px;">
+                <h4 class="card-text"><strong>Employee NO:</strong> {{ data.id }}</h4>
+                <h4 class="card-text"><strong>Name:</strong> {{ data.name }}</h4>
+                <h4 class="card-text"><strong>Department:</strong> {{ data.department }}</h4>
+                <h4 class="card-text"><strong>Email:</strong> {{ data.email }}</h4>
+                <h4 class="card-text"><strong>Joining Date:</strong> {{ data.date | date:'dd/MM/yyyy' }}</h4>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-secondary" (click)="onClose()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
